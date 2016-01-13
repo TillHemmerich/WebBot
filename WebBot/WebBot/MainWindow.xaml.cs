@@ -58,13 +58,13 @@ namespace WebBot
             Storyboard.SetTarget(myDoubleAnimationInWindow2, mainwindow);
 
             Storyboard.SetTargetProperty(myDoubleAnimationInWindow1, new PropertyPath("(Height)"));
-            Storyboard.SetTargetProperty(myDoubleAnimationInWindow2, new PropertyPath("(Width)"))
+            Storyboard.SetTargetProperty(myDoubleAnimationInWindow2, new PropertyPath("(Width)"));
 
-            
-            //myDoubleAnimationInWindow1.From = 0;
-            //myDoubleAnimationInWindow2.From = 0;
-            //myDoubleAnimationInWindow1.To = 600;
-            //myDoubleAnimationInWindow2.From = 800;
+
+            myDoubleAnimationInWindow1.From = 0;
+            myDoubleAnimationInWindow2.From = 0;
+            myDoubleAnimationInWindow1.To = 600;
+            myDoubleAnimationInWindow2.From = 800;
 
             sb2.Begin();
         }
