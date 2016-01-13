@@ -13,3 +13,5 @@ C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBo
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\WebBot.csproj.GenerateResource.Cache
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\WebBot.exe
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\WebBot.pdb
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\WebBot.exe
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\WebBot.pdb

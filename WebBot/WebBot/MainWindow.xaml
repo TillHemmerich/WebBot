@@ -21,7 +21,7 @@
                     <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
                         <Label x:Name="label3" Content="crazymission"/>
                     </ComboBox>
-                    <WebBrowser x:Name="browser" Margin="5,37,0,0"/>
+                    <WebBrowser x:Name="browser" Margin="10,57,10,10"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem">
