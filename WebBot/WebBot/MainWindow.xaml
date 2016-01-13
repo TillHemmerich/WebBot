@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebBot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <TabControl x:Name="tabControl" Margin="0,0,0,-10" SelectionChanged="tabControl_SelectionChanged">
             <TabItem Header="TabItem">
@@ -21,7 +21,7 @@
                     <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
                         <Label x:Name="label3" Content="crazymission"/>
                     </ComboBox>
-                    <WebBrowser x:Name="browser" HorizontalAlignment="Left" Height="253" Margin="5,37,0,0" VerticalAlignment="Top" Width="492"/>
+                    <WebBrowser x:Name="browser" Margin="5,37,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem">
