@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebBot"
         mc:Ignorable="d"
-        Name="mainwindow"
-        Title="MainWindow" Height="600" Width="800">
+        x:Name="WebBot"
+        Title="WebBot" Height="600" Width="800">
     <Grid>
         <TabControl x:Name="tabControl" Margin="0,0,0,-10" SelectionChanged="tabControl_SelectionChanged">
             <TabItem Header="TabItem">

@@ -25,6 +25,7 @@ namespace WebBot
     {
         public MainWindow()
         {
+          
             InitializeComponent();
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
