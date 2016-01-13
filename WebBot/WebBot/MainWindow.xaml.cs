@@ -23,6 +23,12 @@ namespace WebBot
         public MainWindow()
         {
             InitializeComponent();
+            browser.Navigate("https://www.facebook.com/");
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
