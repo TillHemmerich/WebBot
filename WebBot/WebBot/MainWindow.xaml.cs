@@ -23,7 +23,7 @@ namespace WebBot
         public MainWindow()
         {
             InitializeComponent();
-            browser.Navigate("https://www.facebook.com/");
+            browser.Navigate("http://de.ikariam.gameforge.com/");
         }
 
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
