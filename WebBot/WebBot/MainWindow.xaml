@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebBot"
         mc:Ignorable="d"
+        Name="mainwindow"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
         <TabControl x:Name="tabControl" Margin="0,0,0,-10" SelectionChanged="tabControl_SelectionChanged">
@@ -13,12 +14,12 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label x:Name="label" Content="Stadt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="49"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="64,14,0,0" SelectedIndex="0">
+                    <Label x:Name="label_city" Content="Stadt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="49"/>
+                    <ComboBox x:Name="comboBox_city" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="64,14,0,0" SelectedIndex="0">
                         <Label x:Name="label1" Content="bestcity"/>
                     </ComboBox>
-                    <Label x:Name="label2" Content="Mission:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="241,10,0,0"/>
-                    <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
+                    <Label x:Name="label_mission" Content="Mission:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="241,10,0,0"/>
+                    <ComboBox x:Name="comboBox_mission" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
                         <Label x:Name="label3" Content="crazymission"/>
                     </ComboBox>
                     <WebBrowser x:Name="browser" Margin="10,57,10,10"/>
