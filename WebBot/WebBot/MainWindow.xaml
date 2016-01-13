@@ -7,7 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="153" Margin="100,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="304"/>
-
+        <TabControl x:Name="tabControl" Margin="0,0,0,-10">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="label" Content="Stadt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="49"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="64,14,0,0" SelectedIndex="0">
+                        <Label x:Name="label1" Content="bestcity"/>
+                    </ComboBox>
+                    <Label x:Name="label2" Content="Mission:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="241,10,0,0"/>
+                    <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
+                        <Label x:Name="label3" Content="crazymission"/>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

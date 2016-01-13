@@ -1,1 +1,2 @@
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\bin\Debug\WebBot.exe.config
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\bin\Debug\WebBot.exe.config
