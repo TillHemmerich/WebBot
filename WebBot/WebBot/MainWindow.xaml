@@ -149,7 +149,7 @@
     </Window.Resources>
     <Grid>
         <TabControl x:Name="tabControl" Margin="0,0,0,-10" Grid.ColumnSpan="2">
-            <TabItem x:Name="tabOLD" Header="TabItem" Style="{DynamicResource TabItemStyle1}">
+            <TabItem x:Name="tabOLD" Header="TabItem" Style="{DynamicResource TabItemStyle1}" Margin="0,0,-4,-4">
                 <Grid Background="#FFE5E5E5" Margin="0,-3,0,3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -163,10 +163,11 @@
                         <Label x:Name="label3" Content="crazymission"/>
                     </ComboBox>
                     <WebBrowser x:Name="browser" Margin="10,57,10,20"/>
-                    <Button x:Name="button_newtab" Content="neuer Tab" Height="21" Margin="0,15,10,0" VerticalAlignment="Top" Click="button_newtab_Click" HorizontalAlignment="Right" Width="79"/>
-                    <Button x:Name="button_fill" Content="Login" VerticalAlignment="Top" Margin="0,15,105,0" HorizontalAlignment="Right" Width="75" Click="button_fill_Click"/>
+                    <Button x:Name="button_newtab" Content="neuer Tab" Height="21" Margin="0,31,10,0" VerticalAlignment="Top" Click="button_newtab_Click" HorizontalAlignment="Right" Width="79"/>
+                    <Button x:Name="button_fill" Content="Login" VerticalAlignment="Top" Margin="0,32,107,0" HorizontalAlignment="Right" Width="75" Click="button_fill_Click"/>
                     <Label x:Name="label_loggedinas" Content="" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
-                    <Button x:Name="button" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,16,199,0" Click="button_Click"/>
+                    <Button x:Name="button" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,32,199,0" Click="button_Click"/>
+                    <Button x:Name="btn_settings" Content="Settings" HorizontalAlignment="Left" Height="26" Margin="693,0,0,0" VerticalAlignment="Top" Width="79" Click="button1_Click" Background="#FFD8CFCF"/>
                 </Grid>
             </TabItem>
         </TabControl>

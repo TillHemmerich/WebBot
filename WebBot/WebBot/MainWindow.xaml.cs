@@ -28,14 +28,14 @@ namespace WebBot
     {
         public MainWindow()
         {
-          
+
             InitializeComponent();
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
             loadbrowser();
 
         }
-        
+
         public async void loadbrowser()
         {
             await Task.Run(() => System.Threading.Thread.Sleep(2000));
@@ -129,7 +129,8 @@ namespace WebBot
         private void button_newtab_Click(object sender, RoutedEventArgs e)
         {
             TabItem tabNew = TrycloneElement(tabOLD);
-            if (tabNew != null) {
+            if (tabNew != null)
+            {
                 tabControl.Items.Add(tabNew);
             }
         }
@@ -139,15 +140,21 @@ namespace WebBot
             login();
         }
 
+        private void settings()
+        {
+            Settings set = new Settings();
+            set.Show();
+        }
+
         // login
         private void login()
         {
             Login log = new Login();
-            log.Left = this.Left + this.Width/2-log.Width/2;
+            log.Left = this.Left + this.Width / 2 - log.Width / 2;
             log.Top = this.Top;
             log.Topmost = true;
             log.Show();
-            
+
         }
 
         public void logginin()
@@ -181,6 +188,11 @@ namespace WebBot
         private void button_Click(object sender, RoutedEventArgs e)
         {
             logger();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            settings();
         }
     }
 }

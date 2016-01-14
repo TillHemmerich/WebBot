@@ -1,0 +1,17 @@
+﻿<Window x:Class="WebBot.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebBot"
+        mc:Ignorable="d"
+        Title="Settings" Height="324.419" Width="436.047">
+    <Grid>
+        <Button x:Name="btn_Import" Content="Import &#xD;&#xA;" HorizontalAlignment="Left" Height="26" Margin="307,10,0,0" VerticalAlignment="Top" Width="111" Click="btn_Import_Click"/>
+        <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Height="129" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68" Foreground="#FF643F3F" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <TextBlock x:Name="txtPassword" HorizontalAlignment="Left" Height="129" Margin="102,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68" Foreground="#FF643F3F" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Label x:Name="label" Content="User" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label x:Name="label1" Content="Pass" HorizontalAlignment="Left" Height="23" Margin="102,10,0,0" VerticalAlignment="Top" Width="68"/>
+
+    </Grid>
+</Window>
