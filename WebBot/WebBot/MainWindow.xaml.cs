@@ -32,7 +32,6 @@ namespace WebBot
             InitializeComponent();
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
-            design des = new design();
             loadbrowser();
 
         }
@@ -146,7 +145,18 @@ namespace WebBot
             Login log = new Login();
             log.Left = this.Left + this.Width/2-log.Width/2;
             log.Top = this.Top;
+            log.Topmost = true;
             log.Show();
+            
+        }
+
+        public void logginin()
+        {
+            accounts ac = new accounts();
+            String user = ac.username1, password = ac.password1;
+            //btn-login muss gedrückt werden, weltauswahl = logServer, loginName = Benutzername, 
+            //loginPassword = passworteingabe. Dann mit loginBtn einloggen.
+            MessageBox.Show(user+" ist nun angemeldet");
         }
     }
-    }
+}

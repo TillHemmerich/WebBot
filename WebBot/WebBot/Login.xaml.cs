@@ -53,5 +53,39 @@ namespace WebBot
 
             sb1.Begin();
         }
+
+        private void button_login_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBox_username.Text != "" && passwordBox.Password != "" && comboBox.SelectedIndex != -1)
+            {
+                accounts ac = new accounts();
+                MainWindow mw = new MainWindow();
+                ac.username1 = textBox_username.Text;
+                ac.password1 = passwordBox.Password;
+                this.Close();
+                mw.logginin();
+            }
+            else
+            {
+                label_error.Content = "Bitte Felder ausfüllen";
+                if(textBox_username.Text=="")
+                {
+                    label_username.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                if (passwordBox.Password == "")
+                {
+                    label_password.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                if (comboBox.SelectedIndex == -1)
+                {
+                    label_world.Foreground = new SolidColorBrush(Colors.Red);
+                }
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
