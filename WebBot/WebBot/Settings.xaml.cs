@@ -25,15 +25,17 @@ namespace WebBot
             InitializeComponent();
         }
 
+        // importiert akutell eine txt datei aus dem bin/Debug ordner von Projekt damit wir das nicht immer selber anpassen müssen.
 
         public void import()
         {
             string path = Directory.GetCurrentDirectory() + "/TestAccounts.txt";
 
             string[] accountImport = System.IO.File.ReadAllLines(path);
-
+            
             foreach (string account in accountImport)
             {
+                //splittet an dem ":" damit wir username und passwort später getrennt haben 
                 string[] userPass = account.Split(':');
 
                 txtUsername.Text += userPass[0] + "\n";
