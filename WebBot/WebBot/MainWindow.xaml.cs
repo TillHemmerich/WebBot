@@ -156,7 +156,31 @@ namespace WebBot
             String user = ac.username1, password = ac.password1;
             //btn-login muss gedrückt werden, weltauswahl = logServer, loginName = Benutzername, 
             //loginPassword = passworteingabe. Dann mit loginBtn einloggen.
-            MessageBox.Show(user+" ist nun angemeldet");
+        }
+
+        public void logger()
+        {
+            accounts ac = new accounts();
+            String user = ac.username1, password = ac.password1;
+
+            mshtml.HTMLDocument doc = (mshtml.HTMLDocument)browser.Document;
+            try
+            {
+                ((mshtml.HTMLAnchorElement)doc.all.item("btn-login")).click();
+                ((mshtml.HTMLTextAreaElement)doc.all.item("loginName")).innerText = user;
+                ((mshtml.HTMLTextAreaElement)doc.all.item("loginPassword")).innerText = password;
+                ((mshtml.HTMLSelectElement)doc.all.item("logServer")).selectedIndex = ac.world;
+                ((mshtml.HTMLButtonElement)doc.all.item("loginBtn")).click();
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("" + ef);
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            logger();
         }
     }
 }

@@ -10,6 +10,7 @@ namespace WebBot
     {
         private static String userName1 = "";
         private static String passWord1 = "";
+        private static int worlD;
 
         public String username1
         {
@@ -23,5 +24,10 @@ namespace WebBot
             set { passWord1 = value; }
         }
 
+        public int world
+        {
+            get { return worlD; }
+            set { worlD = value; }
+        }
     }
 }

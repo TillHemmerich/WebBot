@@ -62,6 +62,7 @@ namespace WebBot
                 MainWindow mw = new MainWindow();
                 ac.username1 = textBox_username.Text;
                 ac.password1 = passwordBox.Password;
+                ac.world = comboBox.SelectedIndex;
                 this.Close();
                 mw.logginin();
             }
