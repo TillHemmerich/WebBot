@@ -33,51 +33,17 @@ namespace WebBot
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
             design des = new design();
-            animationEnterStart();
+            loadbrowser();
+
+        }
+        
+        public async void loadbrowser()
+        {
+            await Task.Run(() => System.Threading.Thread.Sleep(2000));
             browser.Navigate("http://de.ikariam.gameforge.com/");
         }
 
-        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
-
-        //design
-        public void animationEnterStart()
-        {
-            Duration duration05 = new Duration(TimeSpan.FromSeconds(1.5));
-            Duration duration04 = new Duration(TimeSpan.FromSeconds(0.5));
-
-            DoubleAnimation myDoubleAnimationInWindow1 = new DoubleAnimation();
-            DoubleAnimation myDoubleAnimationInWindow2 = new DoubleAnimation();
-
-            myDoubleAnimationInWindow1.Duration = duration04;
-            myDoubleAnimationInWindow2.Duration = duration05;
-
-            Storyboard sb1 = new Storyboard();
-            Storyboard sb2 = new Storyboard();
-
-            sb1.Duration = duration04;
-            sb2.Duration = duration05;
-
-            sb1.Children.Add(myDoubleAnimationInWindow1);
-            sb2.Children.Add(myDoubleAnimationInWindow2);
-
-            Storyboard.SetTarget(myDoubleAnimationInWindow1, WebBot);
-            Storyboard.SetTarget(myDoubleAnimationInWindow2, WebBot);
-
-            Storyboard.SetTargetProperty(myDoubleAnimationInWindow1, new PropertyPath("(Height)"));
-            Storyboard.SetTargetProperty(myDoubleAnimationInWindow2, new PropertyPath("(Width)"));
-
-
-            myDoubleAnimationInWindow1.From = 0;
-            myDoubleAnimationInWindow2.From = 0;
-            myDoubleAnimationInWindow1.To = 600;
-            myDoubleAnimationInWindow2.To = 800;
-
-            sb1.Begin();
-            sb2.Begin();
-        }
 
         //Browser
         private void SetIE8KeyforWebBrowserControl(string appName)
@@ -103,12 +69,12 @@ namespace WebBot
                 string FindAppkey = Convert.ToString(Regkey.GetValue(appName));
 
                 //Check if key is already present 
-                if (FindAppkey == "8000")
-                {
-                    MessageBox.Show("Required Application Settings Present");
-                    Regkey.Close();
-                    return;
-                }
+                ////if (FindAppkey == "8000")
+                ////{
+                ////    MessageBox.Show("Required Application Settings Present");
+                ////    Regkey.Close();
+                ////    return;
+                ////}
 
                 //If key is not present add the key , Kev value 8000-Decimal 
                 if (string.IsNullOrEmpty(FindAppkey))
@@ -117,10 +83,10 @@ namespace WebBot
                 //check for the key after adding 
                 FindAppkey = Convert.ToString(Regkey.GetValue(appName));
 
-                if (FindAppkey == "8000")
-                    MessageBox.Show("Application Settings Applied Successfully");
-                else
-                    MessageBox.Show("Application Settings Failed, Ref: " + FindAppkey);
+                ////if (FindAppkey == "8000")
+                ////    MessageBox.Show("Application Settings Applied Successfully");
+                ////else
+                ////    MessageBox.Show("Application Settings Failed, Ref: " + FindAppkey);
 
 
             }
@@ -161,12 +127,26 @@ namespace WebBot
 
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void button_newtab_Click(object sender, RoutedEventArgs e)
         {
             TabItem tabNew = TrycloneElement(tabOLD);
             if (tabNew != null) {
                 tabControl.Items.Add(tabNew);
             }
         }
+
+        private void button_fill_Click(object sender, RoutedEventArgs e)
+        {
+            login();
+        }
+
+        // login
+        private void login()
+        {
+            Login log = new Login();
+            log.Left = this.Left + this.Width/2-log.Width/2;
+            log.Top = this.Top;
+            log.Show();
+        }
     }
-}
+    }

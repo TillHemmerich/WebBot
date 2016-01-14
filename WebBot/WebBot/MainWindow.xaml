@@ -148,31 +148,25 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="21*"/>
-        </Grid.ColumnDefinitions>
-        <TabControl x:Name="tabControl" Margin="0,0,0,-10" SelectionChanged="tabControl_SelectionChanged" Grid.ColumnSpan="2">
+        <TabControl x:Name="tabControl" Margin="0,0,0,-10" Grid.ColumnSpan="2">
             <TabItem x:Name="tabOLD" Header="TabItem" Style="{DynamicResource TabItemStyle1}">
                 <Grid Background="#FFE5E5E5" Margin="0,-3,0,3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label x:Name="label_city" Content="Stadt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="49"/>
-                    <ComboBox x:Name="comboBox_city" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="64,14,0,0" SelectedIndex="0">
+                    <ComboBox x:Name="comboBox_city" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="64,14,0,0">
                         <Label x:Name="label1" Content="bestcity"/>
                     </ComboBox>
                     <Label x:Name="label_mission" Content="Mission:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="241,10,0,0"/>
-                    <ComboBox x:Name="comboBox_mission" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0" SelectedIndex="0">
+                    <ComboBox x:Name="comboBox_mission" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="299,14,0,0">
                         <Label x:Name="label3" Content="crazymission"/>
                     </ComboBox>
                     <WebBrowser x:Name="browser" Margin="10,57,10,10"/>
-                    <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Height="21" Margin="579,14,0,0" VerticalAlignment="Top" Width="79" Click="button2_Click"/>
+                    <Button x:Name="button_newtab" Content="neuer Tab" Height="21" Margin="0,15,10,0" VerticalAlignment="Top" Click="button_newtab_Click" HorizontalAlignment="Right" Width="79"/>
+                    <Button x:Name="button_fill" Content="Login" VerticalAlignment="Top" Margin="0,15,105,0" HorizontalAlignment="Right" Width="75" Click="button_fill_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem"/>
-            <Button x:Name="button" Content="Button" Height="13" Width="45"/>
-            <Button x:Name="button1" Content="Button" Height="11" Width="38"/>
         </TabControl>
     </Grid>
 </Window>

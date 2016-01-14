@@ -26,3 +26,5 @@ C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\MainWindow.baml
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\WebBot.g.resources
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\WebBot.Properties.Resources.resources
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\WebBot.csproj.GenerateResource.Cache
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Login.g.cs
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Login.baml
