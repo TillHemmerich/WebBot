@@ -38,14 +38,12 @@ namespace WebBot
         public Verifizierung()
         {
             InitializeComponent();
-            //connection.ConnectionString = "Server=62.75.253.50 ;Database= WebBotIkariamAccounts ;Uid= WebBotIkariam ;Pwd= WebBotIkariam ;";
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             try
             {
-                MySqlConnection conn = new MySqlConnection();
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
+                connection.ConnectionString = myConnectionString;
+                connection.Open();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
