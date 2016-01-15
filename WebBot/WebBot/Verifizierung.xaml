@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebBot"
         mc:Ignorable="d"
-        Title="Verifizierung" Height="140.666" Width="300" WindowStyle="None">
-    <Grid>
+        Title="Verifizierung" Height="140.666" Width="300" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Height="141" VerticalAlignment="Top">
         <Button x:Name="button_login" Content="login" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="button_login_Click"/>
-        <Label x:Name="label_username" Content="Benutzername:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="textBox_username" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="86,26,0,0" VerticalContentAlignment="Center" Text="Syrokx" HorizontalContentAlignment="Center"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="86,73,0,0" Width="120" VerticalContentAlignment="Center" Password="WebBotIkariam" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" KeyDown="passwordBox_KeyDown"/>
-        <Label x:Name="label_password" Content="Passwort:" HorizontalAlignment="Left" Margin="116,48,0,0" Height="26" VerticalAlignment="Top"/>
+        <Label x:Name="label_username" Content="Benutzername:" VerticalAlignment="Top" Margin="102,-4,101,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textBox_username" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Margin="86,22,86,0" VerticalContentAlignment="Center" Text="Syrokx" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="passwordBox" Margin="86,66,86,0" VerticalContentAlignment="Center" Password="WebBotIkariam" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" KeyDown="passwordBox_KeyDown"/>
+        <Label x:Name="label_password" Content="Passwort:" Margin="116,44,117,0" Height="26" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Button x:Name="button" Content="abbrechen" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="10,0,0,10" Click="button_Click"/>
+        <Label x:Name="label" Content="" RenderTransformOrigin="2.807,4.231" Margin="90,81,90,0" FontSize="9.333" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>

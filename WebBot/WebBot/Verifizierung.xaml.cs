@@ -29,15 +29,13 @@ namespace WebBot
         public static string password;
         public static int ID;
         static int i = 0;
-        static string myConnectionString = "server=62.75.253.50;uid=root;" +
-    "pwd=5Keosniluro;database=WebBotIkariamAccounts;";
-
-
-
+        static string myConnectionString = "server=62.75.253.50;uid=WebBotIkariam;" +
+    "pwd=WebBotIkariam;database=WebBotIkariamAccounts;";
 
         public Verifizierung()
         {
             InitializeComponent();
+            label.Foreground = new SolidColorBrush(Colors.Red);
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             try
@@ -49,7 +47,6 @@ namespace WebBot
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void button_login_Click(object sender, RoutedEventArgs e)
@@ -72,7 +69,6 @@ namespace WebBot
                 {
                     password = GetMd5Hash(md5Hash, passwordBox.Password);
                     da = new MySqlDataAdapter("select * from logindaten where Benutzername='" + username + "' and Passwort='" + password + "' ", connection);
-                    connection.Open();
                     da.Fill(dt);
                     if (dt.Rows.Count <= 0)
                     {
@@ -83,15 +79,6 @@ namespace WebBot
                     {
                         busername = true;
                         bpassword = true;
-                        string mysqlstring = "select ID from logindaten where Benutzername='" + username + "' and Passwort='" + password + "' ";
-                        MySqlCommand cmd = new MySqlCommand(mysqlstring, connection);
-                        MySqlDataReader Reader = cmd.ExecuteReader();
-                        while (Reader.Read())
-                        {
-                            ID = Reader.GetInt32(0);
-                        }
-                        Reader.Close();
-                        connection.Close();
                     }
                     dt.Clear();
 
@@ -103,8 +90,6 @@ namespace WebBot
                         else
                             busername = true;
                     dt.Clear();
-
-
                 }
 
                 for (int j = 0; j < 1;)
@@ -120,7 +105,7 @@ namespace WebBot
                         {
                             if (i == 1)
                             {
-                                MessageBox.Show("Passwort ist falsch! Nur noch " + (3 - i) + " versuch. Bitte erneut eingeben.");
+                                label.Content= "Passwort ist falsch!\nNur noch " + (3 - i) + " versuch.\nBitte erneut eingeben.";
                                 textBox_username.Clear();
                                 j++;
                             }
@@ -130,7 +115,7 @@ namespace WebBot
                             }
                             else
                             {
-                                MessageBox.Show("Passwort ist falsch! Nur noch " + (3 - i) + " versuche. Bitte erneut eingeben.");
+                                label.Content = "Passwort ist falsch!\n Nur noch " + (3 - i) + " versuche.\nBitte erneut eingeben.";
                                 textBox_username.Clear();
                                 j++;
                             }
@@ -157,7 +142,7 @@ namespace WebBot
                 {
                     button_login.IsEnabled = false;
                     button.IsEnabled = false;
-                    MessageBox.Show("Passwort zu oft falsch eingegeben! In 2min erneut versuchen!");
+                    label.Content = "Passwort zu oft\nfalsch eingegeben!\nIn 2min erneut versuchen!";
                     Timer();
                     i = 0;
                     passwordBox.Clear();
