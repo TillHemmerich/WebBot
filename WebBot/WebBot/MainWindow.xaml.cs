@@ -28,12 +28,11 @@ namespace WebBot
     {
         public MainWindow()
         {
-
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
             loadbrowser();
-
         }
 
         public async void loadbrowser()

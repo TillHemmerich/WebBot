@@ -32,3 +32,7 @@ C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBo
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\Login.baml
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\Settings.g.cs
 C:\Users\Till\Documents\Visual Studio 2015\Projects\WpfApplication1\WebBot\WebBot\WebBot\obj\Debug\Settings.baml
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Settings.g.cs
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Settings.baml
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Verifizierung.g.cs
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Verifizierung.baml
