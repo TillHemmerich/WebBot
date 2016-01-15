@@ -36,3 +36,4 @@ C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Settings.g.cs
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Settings.baml
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Verifizierung.g.cs
 C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\obj\Debug\Verifizierung.baml
+C:\Users\sven-\Documents\GitHub\WebBot\WebBot\WebBot\bin\Debug\MySql.Data.dll

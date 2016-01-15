@@ -10,7 +10,7 @@
         <Button x:Name="button_login" Content="login" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="button_login_Click"/>
         <Label x:Name="label_username" Content="Benutzername:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <TextBox x:Name="textBox_username" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="86,26,0,0" VerticalContentAlignment="Center" Text="Syrokx" HorizontalContentAlignment="Center"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="86,73,0,0" Width="120" VerticalContentAlignment="Center" Password="1234567890" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="86,73,0,0" Width="120" VerticalContentAlignment="Center" Password="WebBotIkariam" Height="21" VerticalAlignment="Top" HorizontalContentAlignment="Center" KeyDown="passwordBox_KeyDown"/>
         <Label x:Name="label_password" Content="Passwort:" HorizontalAlignment="Left" Margin="116,48,0,0" Height="26" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="abbrechen" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="10,0,0,10" Click="button_Click"/>
 
