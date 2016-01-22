@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebBot"
         mc:Ignorable="d"
-        Title="Verifizierung" Height="140.666" Width="300" WindowStyle="None" ResizeMode="NoResize">
+        Title="Verifizierung" Height="140.666" Width="300" WindowStyle="None" ResizeMode="NoResize" BorderBrush="Gray" BorderThickness="1">
     <Grid Height="141" VerticalAlignment="Top">
         <Button x:Name="button_login" Content="login" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="button_login_Click"/>
         <Label x:Name="label_username" Content="Benutzername:" VerticalAlignment="Top" Margin="102,-4,101,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>

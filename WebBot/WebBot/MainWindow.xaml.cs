@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,7 +39,10 @@ namespace WebBot
         public async void loadbrowser()
         {
             await Task.Run(() => System.Threading.Thread.Sleep(2000));
-            browser.Navigate("http://de.ikariam.gameforge.com/");
+            IPAddress addr1 = IPAddress.Parse("192.168.1.100");
+            //browser.SourceIpAddress = addr1;
+            //browser.
+            browser.Navigate("http://zend2.com/whats-my-ip.php");/*"http://de.ikariam.gameforge.com/"*/
         }
 
 
@@ -142,18 +146,21 @@ namespace WebBot
         private void settings()
         {
             Settings set = new Settings();
-            set.Show();
+            set.Owner = this;
+            set.ShowDialog();
+            //set.Show();
+            //ShowDialog friert alle anderen Fenster ein bis das neue Fenster geschlossen wurde.
         }
 
         // login
         private void login()
         {
             Login log = new Login();
+            log.Owner = this;
             log.Left = this.Left + this.Width / 2 - log.Width / 2;
-            log.Top = this.Top;
+            log.Top = this.Top +1;
             log.Topmost = true;
-            log.Show();
-
+            log.ShowDialog();
         }
 
         public void logginin()
