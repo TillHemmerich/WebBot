@@ -39,10 +39,13 @@ namespace WebBot
         public async void loadbrowser()
         {
             await Task.Run(() => System.Threading.Thread.Sleep(2000));
-            IPAddress addr1 = IPAddress.Parse("192.168.1.100");
             //browser.SourceIpAddress = addr1;
             //browser.
-            browser.Navigate("http://zend2.com/whats-my-ip.php");/*"http://de.ikariam.gameforge.com/"*/
+            browser.Navigate("http://de.ikariam.gameforge.com/");
+            if (browser.IsLoaded==true)
+            {
+                browser.IsEnabled = true;
+            }
         }
 
 
