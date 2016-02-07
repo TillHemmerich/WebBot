@@ -43,9 +43,9 @@ namespace WebBot
                 connection.ConnectionString = myConnectionString;
                 connection.Open();
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Leider ist keine Verbindung zum Loginserver möglich :(");
             }
         }
 
@@ -151,9 +151,13 @@ namespace WebBot
                 {
                 }
             }
-            catch (Exception e)
+            catch (MySql.Data.MySqlClient.MySqlException)
             {
-                MessageBox.Show("ERROR 404:\n\n" + e);
+                MessageBox.Show("Leider ist keine Verbindung\n zum Loginserver möglich :(");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR 404:\n\nEin unerwarteter Fehler ist \naufgetreten bitte starten sie das Programm erneut \nfalls diese Meldung schon das zweite Mal erscheint \nsetzen sie sich bitte mit dem Entwickler in Kontakt!");
             }
             return i;
 
@@ -218,6 +222,13 @@ namespace WebBot
             {
                 button_login_Click(this, new RoutedEventArgs());
             }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Close();
         }
     }
 }

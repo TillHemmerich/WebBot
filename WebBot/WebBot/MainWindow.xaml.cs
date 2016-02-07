@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,13 +28,14 @@ namespace WebBot
     /// </summary>
     public partial class MainWindow : Window
     {
+        int browserloadedcount = 0;
+        private int tabcounter = 2;
         public MainWindow()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             var appName = Process.GetCurrentProcess().ProcessName + ".exe";
             SetIE8KeyforWebBrowserControl(appName);
-            loadbrowser();
         }
 
         public async void loadbrowser()
@@ -132,12 +134,19 @@ namespace WebBot
 
         }
 
-        private void button_newtab_Click(object sender, RoutedEventArgs e)
+        //click on + for newTab
+        private void TabItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            TabItem tabNew = TrycloneElement(tabOLD);
+            string tabcounterstring = tabcounter.ToString();
+        TabItem tabNew = TrycloneElement(tabOLD);
+            TabItem addtabnew = TrycloneElement(additem);
             if (tabNew != null)
             {
+                tabNew.Header = "Tab "+tabcounterstring;
                 tabControl.Items.Add(tabNew);
+                tabcounter++;
+                tabControl.Items.Remove(additem);
+                tabControl.Items.Add(addtabnew);
             }
         }
 
@@ -151,7 +160,6 @@ namespace WebBot
             Settings set = new Settings();
             set.Owner = this;
             set.ShowDialog();
-            //set.Show();
             //ShowDialog friert alle anderen Fenster ein bis das neue Fenster geschlossen wurde.
         }
 
@@ -161,8 +169,14 @@ namespace WebBot
             Login log = new Login();
             log.Owner = this;
             log.Left = this.Left + this.Width / 2 - log.Width / 2;
-            log.Top = this.Top +1;
-            log.Topmost = true;
+            if(this.WindowState == System.Windows.WindowState.Normal)
+            {
+                log.Top = this.Top +2;
+            }
+            else
+            {
+                log.Top = 1;
+            }
             log.ShowDialog();
         }
 
@@ -174,6 +188,9 @@ namespace WebBot
             //loginPassword = passworteingabe. Dann mit loginBtn einloggen.
         }
 
+        /// <summary>
+        /// Logindaten werden dem Browser übergeben     
+        /// </summary>
         public void logger()
         {
             accounts ac = new accounts();
@@ -194,14 +211,17 @@ namespace WebBot
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            logger();
-        }
-
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             settings();
+        }
+
+        private void browser_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            //Darf nur einmal funktionieren!
+            if (browserloadedcount<=0)
+            logger();
+            browserloadedcount++;
         }
     }
 }

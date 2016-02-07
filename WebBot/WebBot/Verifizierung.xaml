@@ -14,6 +14,7 @@
         <Label x:Name="label_password" Content="Passwort:" Margin="116,44,117,0" Height="26" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Button x:Name="button" Content="abbrechen" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="10,0,0,10" Click="button_Click"/>
         <Label x:Name="label" Content="" RenderTransformOrigin="2.807,4.231" Margin="90,81,90,0" FontSize="9.333" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="button1" Content="offline" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="213,87,0,0" Click="button1_Click"/>
 
     </Grid>
 </Window>

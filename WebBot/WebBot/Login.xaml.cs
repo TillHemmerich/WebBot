@@ -29,8 +29,6 @@ namespace WebBot
         //design
         public void animationLogin()
         {
-
-
             Duration duration04 = new Duration(TimeSpan.FromSeconds(1));
 
             DoubleAnimation myDoubleAnimationInWindow1 = new DoubleAnimation();
@@ -59,12 +57,14 @@ namespace WebBot
             if (textBox_username.Text != "" && passwordBox.Password != "" && comboBox.SelectedIndex != -1)
             {
                 accounts ac = new accounts();
-                MainWindow mw = new MainWindow();
                 ac.username1 = textBox_username.Text;
                 ac.password1 = passwordBox.Password;
                 ac.world = comboBox.SelectedIndex;
+                ((MainWindow)Owner).button_fill.IsEnabled = false;
+                ((MainWindow)Owner).tabOLD.Header = ac.username1;
                 this.Close();
-                mw.logginin();
+                ((MainWindow)Owner).logginin();
+                ((MainWindow)Owner).loadbrowser();
             }
             else
             {
